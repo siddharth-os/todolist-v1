@@ -1,0 +1,20 @@
+<%- include("header") -%>
+    <div class="box" id="heading">
+        <h1>Its a <%= listTitle %></h1>
+    </div>
+    <div class="box">
+        <% i=0 %>
+        <% while(i!=newItemSet.length){ %>
+          <div class="item">
+            <input type="checkbox">
+              <p><%= newItemSet[i] %></p>
+          </div>
+
+          <%i=i+1%>
+        <%}%>
+        <form class="" action="/" method="post">
+            <input type="text" name="newTask" placeholder="New Item">
+            <button type="submit" name="list" value=<%=listTitle %>>+</button>
+        </form>
+    </div>
+<%-include("footer")-%>
